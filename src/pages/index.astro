@@ -2,6 +2,8 @@
 import "../styles/global.css";
 
 import OrderItem from "../components/OrderItem.astro";
+import { Image } from 'astro:assets';
+import stortfoto from "../assets/images/stort-foto.jpg";
 ---
 
 <html lang="en">
@@ -15,6 +17,14 @@ import OrderItem from "../components/OrderItem.astro";
   <body>
     <h1>Astro + Open Props</h1>
     <main>
+      <div><Image src={stortfoto} 
+        width="416"
+        height="624"
+        decoding="async"
+        loading="lazy"
+        alt="Københavnerbilleder bogforside" 
+        class="" />
+      </div>
       <ul role="list" class="order-list">
         <OrderItem
           title="Micro Backpack"
